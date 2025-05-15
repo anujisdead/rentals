@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-05-13 16:12:30.364626",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "make",
+  "year",
+  "title",
+  "insurance_expiry",
+  "status",
+  "column_break_xlfh",
+  "colour",
+  "model",
+  "read_only_works",
+  "is_published",
+  "route",
+  "condition"
+ ],
+ "fields": [
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "in_list_view": 0,
+   "label": "Make",
+   "reqd": 1
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "year",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_xlfh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Data",
+   "label": "Colour"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model",
+   "reqd": 1
+  },
+  {
+   "default": "my_read_only_values",
+   "fieldname": "read_only_works",
+   "fieldtype": "Read Only",
+   "label": "Read Only works"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "is published?"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "insurance_expiry",
+   "fieldtype": "Date",
+   "label": "Insurance Expiry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nOut of Service\nBooked\nWrecked"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Rating",
+   "label": "Condition"
+  }
+ ],
+ "grid_page_length": 50,
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2025-05-15 11:16:48.308663",
+ "modified_by": "Administrator",
+ "module": "Rentals",
+ "name": "Vehicle",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vehicle manager",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vehicle supervisor",
+   "select": 1,
+   "write": 1
+  }
+ ],
+ "route": "cars",
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
