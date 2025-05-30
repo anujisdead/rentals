@@ -127,6 +127,9 @@ app_license = "mit"
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
+doctype_js = {
+    "Section": "apps/rentals/rentals/doctype/section/section.js"
+}
 
 # Document Events
 # ---------------
@@ -151,7 +154,7 @@ scheduler_events = {
 
 # Testing
 # -------
-
+fixtures = ["Vehicle Type"]
 # before_tests = "rentals.install.before_tests"
 
 # Overriding Methods

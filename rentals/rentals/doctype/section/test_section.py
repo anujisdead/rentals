@@ -1,9 +1,8 @@
 # Copyright (c) 2025, anuj@gmail.com and Contributors
 # See license.txt
 
-import frappe
+# import frappe
 from frappe.tests import IntegrationTestCase, UnitTestCase
-from frappe.tests.utils import FrappeTestCase
 
 
 # On IntegrationTestCase, the doctype test records and all
@@ -13,22 +12,18 @@ EXTRA_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
-class UnitTestDriver(UnitTestCase):
-	def test_full_name_correctly(self):
-		test_driver = frappe.new_doc("Driver")
-		test_driver.first_name = "John"
-		test_driver.last_name = "Doe"
-		test_driver.licesnse_number = "123456789"
-		test_driver.save()
-
-	self.assertEqual(test_driver.full_name, "John Doe")
+class UnitTestSection(UnitTestCase):
+	"""
+	Unit tests for Section.
+	Use this class for testing individual functions and methods.
+	"""
 
 	pass
 
 
-class IntegrationTestDriver(IntegrationTestCase):
+class IntegrationTestSection(IntegrationTestCase):
 	"""
-	Integration tests for Driver.
+	Integration tests for Section.
 	Use this class for testing interactions between multiple components.
 	"""
 
